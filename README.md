@@ -1,25 +1,38 @@
 # API Data Collector
 
-这是一个用于练习 requests、JSON、CSV 和异常处理的 Python 项目。
+一个基于 Python 的公开 API 数据采集项目。
 
-## 功能
-- 请求公开 API
-- 获取 JSON 数据
-- 保存原始 JSON
-- 提取关键字段并保存为 CSV
-- 处理请求异常
+当前版本功能：
+- 输入 GitHub 用户名
+- 请求 GitHub public API
+- 提取用户公开信息
+- 保存为本地 JSON 文件
+
+## 技术栈
+- Python
+- requests
+- JSON
 
 ## 项目结构
-- `main.py`：主程序
-- `requirements.txt`：依赖列表
-- `output/result.json`：原始 JSON 数据
-- `output/result.csv`：提取后的 CSV 数据
+api-data-collector/
+├─ src/
+│  ├─ main.py
+│  ├─ api_client.py
+│  ├─ parser.py
+│  └─ utils.py
+├─ output/
+├─ requirements.txt
+└─ README.md
 
 ## 运行方式
-1. 安装依赖：
-   `pip install -r requirements.txt`
-2. 运行：
-   `python main.py`
+pip install -r requirements.txt
+python src/main.py
 
-## 当前使用的 API
-- GitHub Public Events API
+## 当前支持
+- GitHub 用户公开信息采集
+
+## 后续计划
+- 支持更多公开 API
+- 支持 CSV 导出
+- 支持命令行参数
+- 增强异常处理
